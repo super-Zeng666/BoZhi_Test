@@ -9,9 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="m-auth" />
         <module name="chat-server" />
+        <module name="video-client" />
         <module name="m-eureka" />
-        <module name="video-server" />
         <module name="m-zuul" />
+        <module name="video-server" />
+        <module name="music-client" />
         <module name="music-server" />
       </profile>
     </annotationProcessing>
