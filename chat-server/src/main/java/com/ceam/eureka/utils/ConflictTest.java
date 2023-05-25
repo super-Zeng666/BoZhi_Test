@@ -59,6 +59,10 @@ public class ConflictTest {
     Collections.reverse(list);
     System.out.println(list);
 
+    //6.list条件过滤==>>happy
+    List<Person> userList = list.stream().filter(o->"张三".equals(o.getName())).collect(Collectors.toList());
+    userList.forEach(System.out::println);
+
     //list条件过滤  设条件为年龄大于18岁
     List<Person> checkList = list.stream()
         .filter(o -> Objects.nonNull(o))
