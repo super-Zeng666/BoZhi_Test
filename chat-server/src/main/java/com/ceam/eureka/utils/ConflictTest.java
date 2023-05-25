@@ -93,16 +93,11 @@ public class ConflictTest {
    */
   public static List<Person> dataPre() {
     List<Person> list = new ArrayList<>();
-    list.add(new Person(999,"阿帅",18));
     list.add(new Person(1, "张三", 19));
     list.add(new Person(2, "李四", 18));
     list.add(new Person(5, "李四", 15));
     list.add(new Person(8, "happy==>修改1", 27));
     list.add(new Person(9, "happy==>修改2", 38));
-    list.add(new Person(3, "王二", 17));
-    list.add(new Person(4, "麻子", 28));
-    list.add(new Person(10, "王五", 29));
-    list.add(new Person(12, "二狗", 23));
     return list;
   }
 }
