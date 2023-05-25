@@ -1,0 +1,32 @@
+server:
+  # 服务端口号
+  port: 8004
+spring:
+  application:
+    # 服务名称 - 服务之间使用名称进行通讯
+    name: service-zuul
+eureka:
+  client:
+    service-url:
+      # 填写注册中心服务器地址
+      defaultZone: http://localhost:7001/eureka
+zuul:
+  routes:
+    # 设置服务a 路径名称 随便起
+    service-a:
+      path: /ceam-auth/**
+      # 这里写a服务的注册名字
+      serviceId: ceam-auth
+    service-b:
+      path: /chat-service/**
+      serviceId: CHAT-SERVER
+#    service-c:
+#      path: /music-server/**
+#      serviceId: music-server
+#    service-d:
+#      path: /video-server/**
+#      serviceId: video-server
+
+#ribbon 超时时间设置，不设置此项有可能会出现超时错误，但实际已经可以访问
+#ribbon.ReadTimeout=1000
+#ribbon.SocketTimeout=1000

@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: chat-server
+server:
+  port: 10003
+eureka:
+  client:
+    service-url:
+      # eureka 服务端地址
+      defaultZone: http://localhost:7001/eureka
