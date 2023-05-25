@@ -65,6 +65,18 @@ public class ConflictTest {
         .filter(o -> o.getAge() > 18)
         .collect(Collectors.toList());
     System.out.println(checkList);
+    //1.根据list内某个字段值，条件去重后获取新的list
+    ArrayList<Person> newList2 = list.stream()
+        .collect(Collectors.collectingAndThen(Collectors.toCollection(() -> new TreeSet<>(
+            Comparator.comparing(Person::getName))), ArrayList::new));
+    newList2.forEach(o -> {
+      System.out.println(o.getName() + "," + o.getAge());
+    });
+    //2.取出集合内某个属性集合
+    List<Integer> ageList = list.stream().map(o -> o.getAge()).collect(Collectors.toList());
+    ageList.forEach(o -> {
+      System.out.println(o);
+    });
   }
 
 
