@@ -97,7 +97,7 @@ public class ConflictTest {
     list.add(new Person(2, "李四", 18));
     list.add(new Person(5, "李四", 15));
     list.add(new Person(8, "suhsi", 27));
-    list.add(new Person(9, "happy2", 38));
+    list.add(new Person(9, "fuhdifu", 38));
     return list;
   }
 }
